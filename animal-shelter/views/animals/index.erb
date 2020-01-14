@@ -18,7 +18,7 @@
     <td><%= animal.adoptable %></td>
     <td>
         <% if animal.customer_id %>
-      <%= animal.customer.name %>
+      <a href="/customers/<%=animal.customer.id %>"><%= animal.customer.name %></a>
       <% end %></td>
     <td><form action="/animals/<%=  animal.id %>/edit" method="get">
       <input type="submit" value="Edit">
