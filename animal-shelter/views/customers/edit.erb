@@ -1,5 +1,5 @@
-<h1>Edit customer details</h1>
-<form method="POST" action="/customers/<%= @customer.id %>/edit">
+<h1>Edit <%= @customer.name %>'s details</h1>
+<form action="/customers/<%= @customer.id %>/edit" method="POST">
   <div class="form-wrapper">
 
     <div class="form-el">
