@@ -1,0 +1,29 @@
+<h1>Customers</h1>
+
+<p>This page shows the customers of the animal shelter, along with their ID, age, and profession.</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Profession</th>
+  </tr>
+  <% for customer in @customers %>
+  <tr>
+    <td><a href="/customers/<%= customer.id %>"><%= customer.name %></a></td>
+    <td><%= customer.age %></td>
+    <td><%= customer.profession %></td>
+    <td><form action="/customers/<%= customer.id %>/edit" method="get">
+      <input type="submit" value="Edit details"></td>
+    <td><form action="/customers/<%= customer.id %>/delete" method="post">
+      <input type="submit" value="Delete">
+    </form></td>
+
+  </tr>
+
+  <% end %>
+</table>
+<br>
+<br>
+
+<button type="button" name="button"><a href="/customers/new">Add a new customer to the alliance</a>

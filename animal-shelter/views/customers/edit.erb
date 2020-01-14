@@ -1,0 +1,26 @@
+<h1>Edit customer details</h1>
+<form method="POST" action="/customers/<%= @customer.id %>/edit">
+  <div class="form-wrapper">
+
+    <div class="form-el">
+      <label for="name"  style="color: white;">Customer name:</label>
+      <input type="text" name="name" id="name" value="<%= @customer.name %>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="age" style="color: white;">Age:</label>
+      <input type="number" name="age" id="age" value="<%= @customer.age %>"/>
+    </div>
+
+    <div class="form-el">
+      <label for="profession" style="color: white;">Profession:</label>
+      <input type="text" name="profession" id="profession" value="<%= @customer.profession %>"/>
+    </div>
+
+
+    <div class="form-el">
+      <input type="submit" value="Save changes"/>
+    </div>
+
+  </div>
+</form>

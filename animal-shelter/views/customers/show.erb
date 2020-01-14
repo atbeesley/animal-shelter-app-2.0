@@ -1,0 +1,24 @@
+<h1><%= @customer.name %></h1>
+<p>Use this to see <%= @customer.name %>'s personal information, their pets, and to assign them an animal as a pet.</p>
+<p>Age: <%= @customer.age %></p>
+<p>Profession: <%= @customer.profession %></p>
+<p>Pets:</p>
+<ul style="color:white;">
+  <% for animal in @customer.animals %>
+  <li ><%= animal.name %><li>
+    <% end %>
+  </ul>
+
+
+
+  <form action="/customers/<%= @customer.id %>/adopt" method="post" >
+
+<select name="animal_id">
+  <% for animal in @animals %>
+<option value="<%= animal.id %>"><%= animal.name %></option>
+<% end %>
+</select>
+
+    <button type="submit" name="Adopt">Assign a new pet to <%= @customer.name %></button>
+
+  </form>

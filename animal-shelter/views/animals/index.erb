@@ -1,0 +1,35 @@
+<h1>Animals</h1>
+
+<p>This page shows the animals of the animal shelter, along with what type of animal each one is, the date they were admitted to the shelter, if they are ready to be adopted or not, and, if they have one, the ID of their owner.</p>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Admission Date</th>
+    <th>Ready for adoption?</th>
+    <th>Owner's Name</th>
+  </tr>
+  <% for animal in @animals %>
+  <tr>
+    <td><%= animal.name %></td>
+    <td><%= animal.type %></td>
+    <td><%= animal.admission_date %></td>
+    <td><%= animal.adoptable %></td>
+    <td>
+        <% if animal.customer_id %>
+      <%= animal.customer.name %>
+      <% end %></td>
+    <td><form action="/animals/<%=  animal.id %>/edit" method="get">
+      <input type="submit" value="Edit">
+        </input></form></td>
+    <td><form action="/animals/<%= animal.id %>/delete" method="post">
+      <input type="submit" value="Delete">
+        </input></form><td>
+  </tr>
+  <% end %>
+</table>
+
+<hr>
+
+<button type="button" name="button"><a href="/animals/new">Shelter a new pet</a>
