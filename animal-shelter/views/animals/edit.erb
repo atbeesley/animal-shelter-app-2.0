@@ -1,5 +1,5 @@
-<h1>Edit animal information</h1>
-<form method="POST" action="/animals/<%= @animal.id %>/edit">
+<h1>Edit <%= @animal.name %> the <%= @animal.type %>'s information</h1>
+<form method="/animals/<%= @animal.id %>/edit" method="POST">
   <div class="form-wrapper">
 
     <div class="form-el">
