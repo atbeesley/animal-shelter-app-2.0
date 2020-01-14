@@ -5,10 +5,10 @@
 <p>Pets:</p>
 <ul style="color:white;">
   <% for animal in @customer.animals %>
-  <li ><%= animal.name %><li>
+  <li ><%= animal.name %></li>
     <% end %>
   </ul>
-  
+
   <form action="/customers/<%= @customer.id %>/adopt" method="post" >
 
 <select name="animal_id">
