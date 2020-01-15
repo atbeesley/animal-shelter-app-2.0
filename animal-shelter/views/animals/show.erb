@@ -1,0 +1,7 @@
+<h1><%= @animal.name %></h1>
+<p>Use this to see <%= @animal.name %> the <%= @animal.type %>'s information.</p>
+<br>
+<p>Type: <%= @animal.type %></p>
+<p>Admission date: <%= @animal.admission_date %></p>
+<p>Readiness for adoption: <%= @animal.adoptable %></p>
+<p>Adopted by (if applicable): <%= @animal.customer.name %></p>

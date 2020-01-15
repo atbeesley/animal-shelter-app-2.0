@@ -12,7 +12,7 @@
   </tr>
   <% for animal in @animals %>
   <tr>
-    <td><%= animal.name %></td>
+    <td><a href="/animals/<%=animal.id %>"><%= animal.name %></a></td>
     <td><%= animal.type %></td>
     <td><%= animal.admission_date %></td>
     <td><%= animal.adoptable %></td>

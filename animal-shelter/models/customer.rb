@@ -7,7 +7,7 @@ class Customer
 attr_accessor :name, :age, :profession, :id, :customer_id
 
 def initialize(options)
-    @id = options['id'].to_i
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @age = options['age']
     @profession = options['profession']
