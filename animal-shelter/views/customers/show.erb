@@ -10,13 +10,10 @@
   </ul>
 
   <form action="/customers/<%= @customer.id %>/adopt" method="post" >
-
 <select name="animal_id">
   <% for animal in @animals %>
 <option value="<%= animal.id %>"><%= animal.name %></option>
 <% end %>
 </select>
-
     <button type="submit" name="Adopt">Assign a new pet to <%= @customer.name %></button>
-
   </form>

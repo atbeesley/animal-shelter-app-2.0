@@ -17,19 +17,19 @@
     <td><%= animal.admission_date %></td>
     <td><%= animal.adoptable %></td>
     <td>
-        <% if animal.customer_id %>
-      <a href="/customers/<%=animal.customer.id %>"><%= animal.customer.name %></a>
+      <% if animal.customer_id %>
+  <a href="/customers/<%=animal.customer.id %>"><%= animal.customer.name %></a>
       <% end %></td>
-    <td><form action="/animals/<%=  animal.id %>/edit" method="get">
-      <input type="submit" value="Edit">
-        </input></form></td>
-    <td><form action="/animals/<%= animal.id %>/delete" method="post">
-      <input type="submit" value="Delete">
-        </input></form><td>
-  </tr>
-  <% end %>
-</table>
+      <td><form action="/animals/<%=  animal.id %>/edit" method="get">
+        <input type="submit" value="Edit">
+      </input></form></td>
+      <td><form action="/animals/<%= animal.id %>/delete" method="post">
+        <input type="submit" value="Delete">
+      </input></form><td>
+      </tr>
+      <% end %>
+    </table>
 
-<hr>
+    <hr>
 
 <button type="button" name="button"><a href="/animals/new">Shelter a new pet</a>

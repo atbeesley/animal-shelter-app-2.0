@@ -1,5 +1,5 @@
 <h1>Edit <%= @customer.name %>'s details</h1>
-<form action="/customers/<%= @customer.id %>/edit" method="POST">
+<form action="/customers/<%= @customer.id %>" method="POST">
   <div class="form-wrapper">
 
     <div class="form-el">
@@ -16,7 +16,6 @@
       <label for="profession" style="color: white;">Profession:</label>
       <input type="text" name="profession" id="profession" value="<%= @customer.profession %>"/>
     </div>
-
 
     <div class="form-el">
       <input type="submit" value="Save changes"/>

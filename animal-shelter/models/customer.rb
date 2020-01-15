@@ -31,6 +31,20 @@ def save()
   @id = id.to_i
 end
 
+def update()
+  sql = "UPDATE customers
+  SET (
+    name,
+    age,
+    profession
+    ) = (
+      $1, $2, $3
+    )
+    WHERE id = $4"
+    values = [@name, @age, @profession, @id]
+    SqlRunner.run(sql, values)
+  end
+
 def self.all()
   sql = "SELECT * FROM customers"
   results = SqlRunner.run( sql )
